@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<script src="../controllers/AlbumController.js"></script>
+		<script src="../model/AlbumModel.js"></script>
+		<script src="../model/ImageModel.js"></script>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Image Gallery</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th> Image </th><th width="100">  Title </th><th width="150"> Description </th>
+				</tr>
+			</thead>
+			<tbody id="imagesTableBody"> </tbody>	
+		</table>
+		<form action="/PhotoAlbum/AlbumController" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+					<input type="text" name="albumName" placeholder="Album Name" />
+		  			<input type="file" name="file" size="50" />
+				  	<input type="submit" value="Submit Image"/>
+		</form>
+		<script type="text/javascript" charset="utf-8">			
+			loadImages();
+		</script>
+	</body>
+</html>
